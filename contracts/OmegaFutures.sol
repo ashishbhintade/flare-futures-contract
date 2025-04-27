@@ -86,9 +86,9 @@ contract OmegaFutures is ERC721 {
 
         // transfer tokens
         if (details.isLong) {
-            s_token.transferFrom(msg.sender, address(this), details.trigger - details.currentPrice * 1e12);
+            s_token.transferFrom(msg.sender, address(this), (details.trigger - details.currentPrice) * 1e12);
         } else {
-            s_token.transferFrom(msg.sender, address(this), details.currentPrice - details.trigger * 1e12);
+            s_token.transferFrom(msg.sender, address(this), (details.currentPrice - details.trigger) * 1e12);
         }
 
         // udpate contract details

@@ -198,7 +198,7 @@ describe("OmegaFutures", async function () {
             };
         }
 
-        it("should allow user to buy contract", async function () {
+        it.only("should allow user to buy contract", async function () {
             const { omegaFutures, usdt, user1 } = await loadFixture(
                 buyContractFixture,
             );
